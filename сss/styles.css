@@ -320,8 +320,9 @@ h1 {
 
 
 /*============================================
-======== Секція чим ми займаємось ===========
+======== Секція "чим ми займаємось?" ===========
 =============================================*/
+
 .possition {
   position: relative;
 }
@@ -347,9 +348,9 @@ background-color: rgba(47, 48, 58, 0.8);
 color: var(--tertiary-color-text);
 }
 
-
-
-/* Секція "команда" */
+/* =======================================
+========== Секція "команда" ==============
+==========================================*/
 
 .section-title-progect {
   margin-top: 0px;
@@ -372,7 +373,9 @@ color: var(--tertiary-color-text);
   display: block;
 }
 
-/* Секція з персоналом */
+/*============================================
+============ Секція з персоналом =============
+==============================================*/
 
 .section-title-progect,
 .section-title-staff,
@@ -477,7 +480,9 @@ color: var(--tertiary-color-text);
   background-color: var(--secondary-background-page);
 }
 
-/* Секція "Постійні клієнти" */
+/*===========================================
+========== Секція "Постійні клієнти" ========
+============================================= */
 
 .header-customer {
   margin-top: 0px;
@@ -508,7 +513,6 @@ color: var(--tertiary-color-text);
   cursor: pointer;
 }
 
-/* .title-customer:hover */
 .link-customer:hover,
 .link-customer:focus {
   border-color: var(--accent-color);
@@ -518,7 +522,9 @@ color: var(--tertiary-color-text);
   fill: currentColor;
 }
 
-/* _______________ФУТЕР__________________ */
+/* =====================================================
+===================    ФУТЕР   ======================
+===================================================== */
 footer {
   background-color: var(--tertiary-background-page);
   padding-top: 60px;
@@ -554,7 +560,10 @@ address {
   font-weight: 400;
   line-height: var(--secondary-line-height);
 }
-/* адреса футера */
+/*==========================================
+================ адреса футера =============
+============================================ */
+
 .address-post {
   display: block;
   width: 231px;
@@ -567,7 +576,10 @@ address {
 .address-post:last-child {
   padding-bottom: 0px;
 }
-/* контакти футера */
+/*==================================
+========== контакти футера =========
+==================================== */
+
 .footer-contact {
   display: block;
   padding-right: 0px;
@@ -586,7 +598,10 @@ address {
   margin-left: 70px;
 }
 
-/* Заголовок до соціальних мереж футера */
+/*==================================================
+======= Заголовок до соціальних мереж футера========
+==================================================== */
+
 .header-network {
   margin-bottom: 20px;
   margin-top: 0px;
@@ -597,7 +612,10 @@ address {
   line-height: var(--primary-line-height);
   text-transform: uppercase;
 }
-/* Список соціальних мереж футера*/
+/*==================================================
+=========== Список соціальних мереж футера==========
+====================================================*/
+
 .footer-social-page {
   display: flex;
   justify-content: center;
@@ -641,7 +659,9 @@ address {
   fill: var(--tertiary-color-text);
 }
 
-/* _________________сторінка "Студія"__________________ */
+/* =============================================
+============= сторінка "Студія"=================
+================================================ */
 
 .button-link {
   display: block;
@@ -669,7 +689,10 @@ address {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* фільтр контента */
+/*==============================================
+============ фільтр контента ===================
+================================================ */
+
 .button-item {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -684,7 +707,9 @@ address {
   border-radius: 4px;
 }
 
-/* Проєкти */
+/*========================================
+============== Проєкти ===================
+==========================================*/
 
 .progect-subject {
   display: flex;
@@ -710,6 +735,37 @@ address {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+}
+
+/* ===========================================
+============= Оверлей ефект ==================
+============================================== */
+
+.progect-subject-overlay {
+  position: relative;
+  transform: translatex(-100%);
+  overflow: hidden;
+  /* transition: transform 250ms ease; */
+}
+
+
+.progect-subject-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 370px;
+  height: 294px;
+  display: block;
+  padding: 63px 24px;
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--tertiary-color-text);
 }
 
 .features {
