@@ -53,10 +53,34 @@ ul {
   clip-path: inset(50%);
   margin: -1px;
 }
-/* підсвітка активної сторінки */
+
+/*========================================
+========== підсвітка активної сторінки====
+========================================== */
+
 .nav-link.current {
   color: var(--accent-color);
+  position: relative;
 }
+
+/*========================================
+========== Риска підсвітка активної сторінки====
+========================================== */
+
+.nav-link.nav-link.current::after{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+
+
 /* Кнопки */
 .button-item,
 .button-activ {
@@ -719,12 +743,20 @@ address {
   margin-bottom: 0px;
 }
 
-.content {
+/* ========================================================
+= Відносно цього селектора проходить позиціювання оверлея =
+===========================================================*/
+
+.tumb {
   position: relative;
+  overflow: hidden;
+
+}
+
+.content {
   display: block;
   margin-right: 30px;
   margin-bottom: 30px;
-  overflow: hidden;
 }
 .content:nth-child(3n) {
   margin-right: 0px;
@@ -760,7 +792,7 @@ address {
 
   background-color: rgba(33, 150, 243, 0.9);
   transform: translatey(100%);
-  transition: transform 250ms ease;
+  transition: transform 250ms  cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
 }
 
