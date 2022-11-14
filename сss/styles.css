@@ -311,7 +311,9 @@ h1 {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
-  
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .backdrop.is-hidden {
@@ -320,11 +322,16 @@ h1 {
   visibility: hidden;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   min-width: 528px;
   min-height: 581px;
@@ -334,21 +341,27 @@ h1 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  animation: modal-born 2000ms;
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: transform 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-@keyframes modal-born{
+/* @keyframes modal-born{
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(1.5);  }
-}
+} */
+
+/* ===================================================
+======= Кновка "Закрити" модальне вікно===============
+======================================================*/
 
  .button-close {
   display: flex;
   align-items: center;
+
   margin-left: auto;
   margin-top: 8px;
   margin-right: 8px;
@@ -358,8 +371,20 @@ h1 {
   background-color: var(--primary-background-page);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-} 
 
+  transition: color 250ms  cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-close:hover,
+.button-close:focus {
+  background-color: var(--accent-color);
+  color: var(--tertiary-color-text);
+  fill: var(--tertiary-color-text);
+}
+
+.button-close:hover .icon-button-close-black {
+  fill: currentColor;
+}
 
 /* ________________СЕКЦІЇ____________________ */
 
@@ -845,7 +870,7 @@ address {
 = Відносно цього селектора проходить позиціювання оверлея =
 ===========================================================*/
 
-.tumb {
+.thumb {
   position: relative;
   overflow: hidden;
 
