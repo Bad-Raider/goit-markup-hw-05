@@ -916,7 +916,8 @@ address {
   opacity: 0;
 }
 
- .content:hover .progect-subject-overlay {
+ .progect-subject-link:hover .progect-subject-overlay,
+ .progect-subject-link:focus .progect-subject-overlay {
   transform: translatex(0);
   opacity: 1;
 
